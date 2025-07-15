@@ -4,13 +4,13 @@ A Python SDK for integrating with Notify Africa SMS service, allowing developers
 
 ## Features
 
-- ✅ **Authentication** - API key and sender ID management
-- 📤 **Send Single SMS** - Send SMS to individual recipients
-- 📦 **Send Bulk SMS** - Send SMS to multiple recipients
-- 🕒 **Send Scheduled SMS** - Schedule SMS for future delivery
-- 📁 **Excel Integration** - Send SMS from Excel files
-- 📊 **Delivery Reports** - Check SMS delivery status
-- 🛠️ **Developer Friendly** - Type hints, error handling, and comprehensive documentation
+- **Authentication** - API key and sender ID management
+- **Send Single SMS** - Send SMS to individual recipients
+- **Send Bulk SMS** - Send SMS to multiple recipients
+- **Send Scheduled SMS** - Schedule SMS for future delivery
+- **Excel Integration** - Send SMS from Excel files
+- **Delivery Reports** - Check SMS delivery status
+- **Developer Friendly** - Type hints, error handling, and comprehensive documentation
 
 ## Installation
 
@@ -26,7 +26,7 @@ from notify_africa import NotifyAfricaClient
 # Initialize client
 client = NotifyAfricaClient(
     api_key="your_api_key_here",
-    sender_id="NOTIFYAFRICA"
+    sender_id="Your sender ID"
 )
 
 # Send a single SMS
