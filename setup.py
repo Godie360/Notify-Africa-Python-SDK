@@ -7,11 +7,11 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
 
 setup(
-    name="notify-africa",
-    version="1.0.0",
+    name="notify-africa-sms",
+    version="2.0.0",  # Increment to next available version
     author="Godfrey Enosh",
     author_email="godfreyenos360@gmail.com",
-    description="Python SDK for Notify Africa API",
+    description="Python SDK for Notify Africa SMS API",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Godie360/Notify-Africa-Python-SDK",

@@ -137,9 +137,9 @@ class NotifyAfricaClient:
         
         # Prepare request data based on API documentation
         data = {
-            "sender_id": sender,  # This should be the sender ID name/number
+            "sender_id": sender,  
             "sms": message,
-            "schedule": "none",  # Immediate sending
+            "schedule": "none",  
             "recipients": [{"number": validated_numbers[0]}]
         }
         
@@ -382,7 +382,16 @@ class NotifyAfricaClient:
             }
         elif isinstance(response, dict):
             # API returns structured response
-            return response
+            # Ensure data is always a list
+            data = response.get('data', [])
+            if not isinstance(data, list):
+                data = []
+            
+            return {
+                "success": response.get('success', True),
+                "data": data,
+                "message": response.get('message', f"Retrieved {len(data)} SMS records")
+            }
         else:
             # Fallback for unexpected response format
             return {

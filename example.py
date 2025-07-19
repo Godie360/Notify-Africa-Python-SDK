@@ -19,8 +19,8 @@ from notify_africa.exceptions import (
 def main():
     # Initialize the client
     client = NotifyAfricaClient(
-        api_key=os.getenv("NOTIFY_AFRICA_API_KEY"),
-        sender_id=os.getenv("NOTIFY_AFRICA_SENDER_ID")
+        api_key=os.getenv("NOTIFY_AFRICA_API_KEY", "799|UmqYZrCcFozN4rnSo5BVlfb3XIj0OPK8eMlxL5REbbd33ed2"),
+        sender_id=os.getenv("NOTIFY_AFRICA_SENDER_ID", "16")
     )
     
     try:
